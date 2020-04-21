@@ -236,6 +236,13 @@ Invite a user to join the team specified in the URL. To use it send a `POST` req
   You need to be <InlineCode>OWNER</InlineCode> to use it.
 </Note>
 
+<Note>
+  Users who requested access cannot be invited and must instead be accepted.
+  <Link href="/docs/v2/platform/frequently-asked-questions#inviting-users-to-team-who-requested-access">
+    Read the FAQ.
+  </Link>
+</Note>
+
 #### Request Parameters
 
 | Key       | <HelpLink href="#api-basics/types" hasIcon>Type</HelpLink> | Required | Description                                                                                               |
@@ -308,7 +315,12 @@ Change the role or status of an user inside a team member. To change it send a `
 
 Request to join a team as a <InlineCode>MEMBER</InlineCode>. An <InlineCode>OWNER</InlineCode> of the team can accept or decline this request.
 
-<Note>Only 10 users can request access to a team at the same time.</Note>
+<Note>
+  Only 10 users can request access to a team at the same time.{' '}
+  <Link href="/docs/v2/platform/frequently-asked-questions#maximum-team-member-requests">
+    Read the FAQ.
+  </Link>
+</Note>
 
 ##### Example Request
 
