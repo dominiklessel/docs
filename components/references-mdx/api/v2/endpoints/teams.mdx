@@ -183,23 +183,25 @@ Update the information of the team defined with the id. You need to send a `PATC
 
 ### Get list of team members
 
-<Endpoint method="GET" url="/v1/teams/:id/members" />
+<Endpoint method="GET" url="/v2/teams/:id/members" />
 
 Get the list of team members of the team defined in the URL. The response is a list of maps with the following format.
 
 #### Response Parameters
 
-| Key          | <HelpLink href="#api-basics/types" hasIcon>Type</HelpLink> | Description                                                |
-| ------------ | ---------------------------------------------------------- | ---------------------------------------------------------- |
-| **uid**      | <HelpLink href="#api-basics/types">ID</HelpLink>           | The team member unique identifier.                         |
-| **role**     | <HelpLink href="#api-basics/types">Enum</HelpLink>         | The role inside the team, it could be `OWNER` or `MEMBER`. |
-| **email**    | <HelpLink href="#api-basics/types">String</HelpLink>       | The email address of the team member.                      |
-| **username** | <HelpLink href="#api-basics/types">String</HelpLink>       | The username of the team member.                           |
+| Key                   | <HelpLink href="#api-basics/types" hasIcon>Type</HelpLink> | Description                                                      |
+| --------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------- |
+| **uid**               | <HelpLink href="#api-basics/types">ID</HelpLink>           | The team member unique identifier.                               |
+| **role**              | <HelpLink href="#api-basics/types">Enum</HelpLink>         | The role inside the team, it could be `OWNER` or `MEMBER`.       |
+| **email**             | <HelpLink href="#api-basics/types">String</HelpLink>       | The email address of the team member.                            |
+| **username**          | <HelpLink href="#api-basics/types">String</HelpLink>       | The username of the team member.                                 |
+| **confirmed**         | <HelpLink href="#api-basics/types">Boolean</HelpLink>      | Value is `true` when the member was accepted or joined the team. |
+| **accessRequestedAt** | <HelpLink href="#api-basics/types">Number</HelpLink>       | Timestamp for when the user requested access to the team.        |
 
 ##### Example Request
 
 <Request
-  url={`${API_ENDPOINT}/v1/teams/team_ofwUZockJlL53hINUGCc1ONW/members`}
+  url={`${API_ENDPOINT}/v2/teams/team_ofwUZockJlL53hINUGCc1ONW/members`}
   auth
 />
 
@@ -210,13 +212,15 @@ Get the list of team members of the team defined in the URL. The response is a l
     "uid": "2qDDuGFTWXBLDNnqZfWPDp1A",
     "role": "OWNER",
     "email": "user-emailgmail.com",
-    "username": "some-user"
+    "username": "some-user",
+    "confirmed": true
   },
   {
     "uid": "JJHkdv6NaPOTH88pXn8FEuGz",
     "role": "OWNER",
     "email": "another-user@mail.com",
-    "username": "another-user"
+    "username": "another-user",
+    "confirmed": true
   }
 ]`}</Code>
 
