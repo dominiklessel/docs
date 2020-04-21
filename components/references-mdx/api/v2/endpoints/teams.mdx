@@ -207,22 +207,24 @@ Get the list of team members of the team defined in the URL. The response is a l
 
 ##### Example Response
 
-<Code lang="json">{`[
-  {
-    "uid": "2qDDuGFTWXBLDNnqZfWPDp1A",
-    "role": "OWNER",
-    "email": "user-emailgmail.com",
-    "username": "some-user",
-    "confirmed": true
-  },
-  {
-    "uid": "JJHkdv6NaPOTH88pXn8FEuGz",
-    "role": "OWNER",
-    "email": "another-user@mail.com",
-    "username": "another-user",
-    "confirmed": true
-  }
-]`}</Code>
+<Code lang="json">{`{
+  members: [
+    {
+      "uid": "2qDDuGFTWXBLDNnqZfWPDp1A",
+      "role": "OWNER",
+      "email": "user-emailgmail.com",
+      "username": "some-user",
+      "confirmed": true
+    },
+    {
+      "uid": "JJHkdv6NaPOTH88pXn8FEuGz",
+      "role": "OWNER",
+      "email": "another-user@mail.com",
+      "username": "another-user",
+      "confirmed": true
+    }
+  ]
+}`}</Code>
 
 ### Invite user to team
 
