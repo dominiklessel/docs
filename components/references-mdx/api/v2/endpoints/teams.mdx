@@ -189,14 +189,14 @@ Get the list of team members of the team defined in the URL. The response is a l
 
 #### Response Parameters
 
-| Key                   | <HelpLink href="#api-basics/types" hasIcon>Type</HelpLink> | Description                                                      |
-| --------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------- |
-| **uid**               | <HelpLink href="#api-basics/types">ID</HelpLink>           | The team member unique identifier.                               |
-| **role**              | <HelpLink href="#api-basics/types">Enum</HelpLink>         | The role inside the team, it could be `OWNER` or `MEMBER`.       |
-| **email**             | <HelpLink href="#api-basics/types">String</HelpLink>       | The email address of the team member.                            |
-| **username**          | <HelpLink href="#api-basics/types">String</HelpLink>       | The username of the team member.                                 |
+| Key                   | <HelpLink href="#api-basics/types" hasIcon>Type</HelpLink> | Description                                                    |
+| --------------------- | ---------------------------------------------------------- | -------------------------------------------------------------- |
+| **uid**               | <HelpLink href="#api-basics/types">ID</HelpLink>           | The team member unique identifier.                             |
+| **role**              | <HelpLink href="#api-basics/types">Enum</HelpLink>         | The role inside the team, it could be `OWNER` or `MEMBER`.     |
+| **email**             | <HelpLink href="#api-basics/types">String</HelpLink>       | The email address of the team member.                          |
+| **username**          | <HelpLink href="#api-basics/types">String</HelpLink>       | The username of the team member.                               |
 | **confirmed**         | <HelpLink href="#api-basics/types">Boolean</HelpLink>      | Value is `true` if the member was accepted or joined the team. |
-| **accessRequestedAt** | <HelpLink href="#api-basics/types">Number</HelpLink>       | Timestamp for when the user requested access to the team.        |
+| **accessRequestedAt** | <HelpLink href="#api-basics/types">Number</HelpLink>       | Timestamp for when the user requested access to the team.      |
 
 ##### Example Request
 
@@ -308,7 +308,7 @@ Change the role or status of an user inside a team member. To change it send a `
 
 Request to join a team as a <InlineCode>MEMBER</InlineCode>. An <InlineCode>OWNER</InlineCode> of the team can accept or decline this request.
 
-<Note>Only 10 users can access request to a team at the same team.</Note>
+<Note>Only 10 users can access request to a team at the same time.</Note>
 
 ##### Example Request
 
