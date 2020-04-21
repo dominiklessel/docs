@@ -18,7 +18,9 @@ export const meta = {
 
 <Note type="alert">
   The <InlineCode>name</InlineCode> property has been deprecated in favor of{' '}
-  <Link href="/docs/now-cli#commands/now/project-linking">Project Linking</Link>
+  <Link href="/docs/now-cli#commands/overview/project-linking">
+    Project Linking
+  </Link>
   , which allows you to link a <ProductName /> Project to your local codebase when
   you run <InlineCode>now</InlineCode>.
 </Note>
@@ -38,7 +40,7 @@ The prefix for all new deployment instances. The CLI usually generates this fiel
 The defined name is also used to organize the deployment into [a project](/docs/v2/platform/projects).
 
 <Code lang="json">{`{
-  "name": "zeit-chat"
+  "name": "example-app"
 }`}</Code>
 
 ## version
@@ -61,7 +63,7 @@ Specifies the [<ProductName /> Platform version](/docs/v2/platform/overview#vers
 
 **Limit**: A maximum of 64 aliases in the array.
 
-The alias or aliases are applied automatically using [<ProductName /> for GitHub](/docs/v2/git-integrations/zeit-now-for-github), [<ProductName /> for GitLab](/docs/v2/git-integrations/zeit-now-for-gitlab), or [<ProductName /> for Bitbucket](/docs/v2/git-integrations/zeit-now-for-bitbucket) when merging or pushing to the default branch.
+The alias or aliases are applied automatically using [<ProductName /> for GitHub](/docs/v2/git-integrations/vercel-for-github), [<ProductName /> for GitLab](/docs/v2/git-integrations/vercel-for-gitlab), or [<ProductName /> for Bitbucket](/docs/v2/git-integrations/vercel-for-bitbucket) when merging or pushing to the default branch.
 
 You can deploy to the defined aliases using [<ProductShortName /> CLI](/download) by setting the [production deployment environment target](/docs/v2/custom-domains#deploying-with-your-domain).
 
@@ -291,7 +293,7 @@ For more information on Runtimes, see the documentation:
     { "src": "/users/(?<id>[^/]*)", "dest": "/users-api.js?id=$id" },
     { "src": "/.*", "dest": "https://my-old-site.com"},
     { "src": "/legacy", "status": 404},
-    { "src": "/redirect", "status": 308, "headers": { "Location": "https://zeit.co/" } }
+    { "src": "/redirect", "status": 308, "headers": { "Location": "https://example.com/" } }
   ]
 }`}</Code>
 
@@ -305,11 +307,11 @@ For more information on routes, see the documentation:
 
 **Type:** `Array` of region identifier `String`.
 
-**Valid values:** a list of valid [region identifiers](/docs/v2/platform/regions-and-providers).
+**Valid values:** a list of valid [region identifiers](/docs/v2/platform/regions).
 
 By setting and modifying this value, you can decide the deployment **regions** of the [Serverless Functions](/docs/v2/serverless-functions/introduction/) that get created as a result of the [build steps](/docs/v2/build-step). By default, the closest region to the geographical location of the deployment is used, or if using a <ProductName /> for Git Integration, SFO is used by default.
 
-This value does not impact static files or edge caches, since deployments always have a [CDN layer](/docs/v2/network/caching/) in front.
+This value does not impact static files or edge caches, since deployments always have a [CDN layer](/docs/v2/edge-network/caching/) in front.
 
 The special value `all` can be used to target all available regions.
 

@@ -13,7 +13,7 @@ export const meta = {
   title: 'Custom Domains',
   description: 'How to add and use a custom domain with your project.',
   editUrl: 'pages/docs/v2/custom-domains.mdx',
-  lastEdited: '2020-04-14T00:02:08.000Z'
+  lastEdited: '2020-04-17T15:35:52.000Z'
 }
 
 By default, all deployments are assigned a `.now.sh` suffixed domain.
@@ -24,11 +24,11 @@ In this document, adding a domain to your <ProductName /> [projects](/docs/v2/pl
 
 ## Adding a Domain
 
-If you don't own a domain yet, you can [purchase it with <OrgName />](https://zeit.co/domains). Then, once you own a domain, adding it to a project is very straightforward:
+If you don't own a domain yet, you can [purchase it with <OrgName />](/domains). Then, once you own a domain, adding it to a project is very straightforward:
 
 ### Step 1: Selecting Your Project
 
-On the [dashboard](https://zeit.co/dashboard), pick the project to which you would like to assign your domain:
+On the [dashboard](/dashboard), pick the project to which you would like to assign your domain:
 
 <Image
   src={`${process.env.ASSETS}/docs/common/select-project.png`}
@@ -74,7 +74,7 @@ From the **Domains** page, enter the domain you wish to add to the project:
 
 ### Step 4: Configuring the Domain
 
-Once the domain has been added, you will be presented with different methods for configuring it, depending on whether it is an [**apex domain**](/docs/v2/platform/glossary#apex-domain) (zeit.co) or **subdomain** (docs.zeit.co).
+Once the domain has been added, you will be presented with different methods for configuring it, depending on whether it is an [**apex domain**](/docs/v2/platform/glossary#apex-domain) (example.com) or **subdomain** (docs.example.com).
 
 Both domain types can be configured using the **Nameservers** method. However, **apex domains** also allow for verification via the **ANAME** record, while **subdomains** allow for verification via the **CNAME** record.
 
@@ -160,7 +160,7 @@ To add a redirect, click the **Edit** button for the domain you want to redirect
   height={642 / 2.1}
   shadow
 />
-<Caption>A <b>domain redirect</b> that redirects requests made to <InlineCode>www.zeit.rocks</InlineCode> to <InlineCode>zeit.rocks</InlineCode>.</Caption>
+<Caption>A <b>domain redirect</b> that redirects requests made to <InlineCode>www.example.com</InlineCode> to <InlineCode>example.com</InlineCode>.</Caption>
 
 ## Moving Domains
 

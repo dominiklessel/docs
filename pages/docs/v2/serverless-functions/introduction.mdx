@@ -13,7 +13,7 @@ export const meta = {
   title: 'Serverless Functions',
   description: `Learn how to deploy Serverless Functions with ${PRODUCT_NAME}.`,
   editUrl: 'pages/docs/v2/serverless-functions/introduction.mdx',
-  lastEdited: '2020-04-14T00:02:08.000Z'
+  lastEdited: '2020-04-17T15:35:52.000Z'
 }
 
 With <ProductName />, you can deploy Serverless Functions, which are pieces of code written with [backend languages](/docs/v2/serverless-functions/supported-languages/#supported-languages) that take an HTTP request and provide a response.
@@ -49,7 +49,7 @@ export default (req: NowRequest, res: NowResponse) => {
   A TypeScript Serverless Function that returns a JSON response.
 </Caption>
 
-When a user visits `/api/get-user`, they will receive the JSON from above. Note that you don't have to explicitly set up any routing rules for this to work. By default, [filesystem routing](https://zeit.co/docs/configuration/#routes) is leveraged.
+When a user visits `/api/get-user`, they will receive the JSON from above. Note that you don't have to explicitly set up any routing rules for this to work. By default, [filesystem routing](/docs/configuration/#routes) is leveraged.
 
 ## Deploying Serverless Functions
 
@@ -94,7 +94,7 @@ The above example echoes the `body`, path `query`, and `cookie`s, passed with th
 
 Then, all you need to do, to have a live API, is push to your connected Git repository using a [<ProductName /> for Git Integration](/docs/v2/git-integrations) to receive a deployment automatically.
 
-The resulting deployment will contain your Node.js Serverless Function and will provide you with a URL like the following, with your API ready to go: <https://node-echo-api.now-examples.now.sh/api/?name=zeit>
+The resulting deployment will contain your Node.js Serverless Function and will provide you with a URL like the following, with your API ready to go: <https://node-echo-api.now-examples.now.sh/api/?name=example>
 
 ### More Examples and Supported Languages
 
@@ -173,7 +173,7 @@ If you have an `api` directory like the [above examples](#deploying-serverless-f
 
 <Note>
   The <InlineCode>now dev</InlineCode> command is still in beta. If you have any
-  feedback, <Link href="https://zeit.co/feedback">please let us know</Link>.
+  feedback, <Link href="/feedback">please let us know</Link>.
 </Note>
 
 If you have a statically generated frontend that supports its own development environment, such as Next.js, we recommend creating a `dev` script within a `package.json` file at the root of your project that `now dev` can use and extend:

@@ -13,10 +13,10 @@ export const meta = {
   title: 'Projects',
   description: `Setting up projects with a list of deployments on ${PRODUCT_NAME}.`,
   editUrl: 'pages/docs/v2/platform/projects.mdx',
-  lastEdited: '2020-04-14T00:02:08.000Z'
+  lastEdited: '2020-04-16T03:34:45.000Z'
 }
 
-To deploy on <ProductName />, you need to create a **Project**. A Project is a logical structure that groups [deployments](/docs/v2/platform/deployments) and [custom domains](/docs/v2/custom-domains). Each project can be associated to a [GitHub](/docs/v2/git-integrations/zeit-now-for-github), [GitLab](/docs/v2/git-integrations/zeit-now-for-gitlab), or [Bitbucket](/docs/v2/git-integrations/zeit-now-for-bitbucket) repository.
+To deploy on <ProductName />, you need to create a **Project**. A Project is a logical structure that groups [deployments](/docs/v2/platform/deployments) and [custom domains](/docs/v2/custom-domains). Each project can be associated to a [GitHub](/docs/v2/git-integrations/vercel-for-github), [GitLab](/docs/v2/git-integrations/vercel-for-gitlab), or [Bitbucket](/docs/v2/git-integrations/vercel-for-bitbucket) repository.
 
 ## Creating a Project
 
@@ -34,7 +34,7 @@ You can either [import from an existing Git repository](/docs/v2/git-integration
 
 ## Project Settings
 
-To edit project settings, choose a project from the [dashboard](https://zeit.co/dashboard):
+To edit project settings, choose a project from the [dashboard](/dashboard):
 
 <Image
   src={`${process.env.ASSETS}/docs/common/select-project.png`}
@@ -101,7 +101,7 @@ To edit your project’s Git Integration settings, select the **Git Integration*
 />
 <Caption>Selecting the <b>Git Integration</b> menu item from the project settings page.</Caption>
 
-If you haven’t set up your Git Integration for [GitHub](/docs/v2/git-integrations/zeit-now-for-github), [GitLab](/docs/v2/git-integrations/zeit-now-for-gitlab), or [Bitbucket](/docs/v2/git-integrations/zeit-now-for-bitbucket) yet, you can do so from here.
+If you haven’t set up your Git Integration for [GitHub](/docs/v2/git-integrations/vercel-for-github), [GitLab](/docs/v2/git-integrations/vercel-for-gitlab), or [Bitbucket](/docs/v2/git-integrations/vercel-for-bitbucket) yet, you can do so from here.
 
 <Image
   src={`${process.env.ASSETS}/docs/platform/projects/git-integration-not-connected.png`}
@@ -127,9 +127,9 @@ If you’d like to disconnect your project from a Git repository, **empty the fi
 
 If you’d like to disconnect your **personal account** or **team** from GitHub, GitLab, or Bitbucket, follow the directions here:
 
-- [Disconnect from GitHub](/docs/v2/git-integrations/zeit-now-for-github#disconnect-from-github)
-- [Disconnect from GitLab](/docs/v2/git-integrations/zeit-now-for-gitlab#disconnect-from-gitlab)
-- [Disconnect from Bitbucket](/docs/v2/git-integrations/zeit-now-for-bitbucket#disconnect-from-bitbucket)
+- [Disconnect from GitHub](/docs/v2/git-integrations/vercel-for-github#disconnect-from-github)
+- [Disconnect from GitLab](/docs/v2/git-integrations/vercel-for-gitlab#disconnect-from-gitlab)
+- [Disconnect from Bitbucket](/docs/v2/git-integrations/vercel-for-bitbucket#disconnect-from-bitbucket)
 
 ### Deploy Hooks
 
@@ -144,7 +144,7 @@ If you’d like to disconnect your **personal account** or **team** from GitHub,
   domain under a different project first.
 </Note>
 
-To delete a project, choose a project from the [dashboard](https://zeit.co/dashboard):
+To delete a project, choose a project from the [dashboard](/dashboard):
 
 <Image
   src={`${process.env.ASSETS}/docs/common/select-project.png`}

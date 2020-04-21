@@ -40,7 +40,7 @@ All log types - **Build Time**, **Edge Network**, and **Runtime** - have differi
 
 During the [Build Step](/docs/v2/platform/glossary#build-step), all logs are stored and **persisted**.
 
-For [Edge Network requests](/docs/v2/network/regions-and-providers#automatic-edge-cdn), all logs are **not persisted**.
+For [Edge Network requests](/docs/v2/edge-network/regions#automatic-edge-cdn), all logs are **not persisted**.
 
 For [Serverless Functions](/docs/v2/serverless-functions/introduction/), only logs from failed requests are **persisted**.
 
@@ -70,7 +70,7 @@ The <ProductName /> platform does not currently support HTTP/2 Push.
 
 [Serverless Functions](/docs/v2/serverless-functions/introduction) do not support WebSockets.
 
-Instead of pushing data, you can intelligently fetch data on-demand. For example, the `zeit.co` dashboard delivers real-time updates using [SWR](https://swr.now.sh).
+Instead of pushing data, you can intelligently fetch data on-demand. For example, the <ProductName /> dashboard delivers real-time updates using [SWR](https://swr.now.sh).
 
 If you need persistent connections to push data to the client, consider using third party pub/sub services. See the [Pusher Channels Guide](/guides/deploying-pusher-channels-with-zeit-now) for an example.
 

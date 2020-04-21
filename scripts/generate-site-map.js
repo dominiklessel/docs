@@ -4,7 +4,7 @@ const path = require('path')
 const prettier = require('prettier')
 const productNames = require('../lib/name-constants.json')
 
-const DOMAIN = 'https://zeit.co'
+const DOMAIN = 'https://vercel.com'
 const SITE_PATHS = [
   '/docs',
   '/docs/api',
@@ -75,6 +75,7 @@ function xmlUrlNode(pagePath) {
           .replace(/\${PRODUCT_NAME}/g, productNames.productName)
           .replace(/\${ORG_NAME}/g, productNames.orgName)
           .replace(/\${CDN_NAME}/g, productNames.cdnName)
+          .replace(/\${CDN_SHORT_NAME}/g, productNames.cdnShortName)
           .replace(/\${PRODUCT_SHORT_NAME}/g, productNames.productShortName)
           .replace(/\${PRODUCT_V1_NAME}/g, productNames.productV1Name)
           .replace(/\${ORG_V1_NAME}/g, productNames.orgV1Name)

@@ -14,14 +14,14 @@ export const meta = {
   authors: ['msweeneydev', 'timothy', 'skllcrn'],
   url: '/guides/upgrade-to-zero-configuration',
   editUrl: 'pages/guides/upgrade-to-zero-configuration.mdx',
-  lastEdited: '2020-04-14T00:02:08.000Z'
+  lastEdited: '2020-04-17T15:50:37.000Z'
 }
 
 With zero configuration, it's never been easier to deploy an app with <ProductName />. This guide highlights a set of common scenarios, showing you how to take advantage of these new features.
 
 ## Next.js
 
-In the first example, we will explore how to deploy [a Next.js app](/guides/deploying-nextjs-with-now) with zero configuration.
+In the first example, we will explore how to deploy [a Next.js app](/guides/deploying-nextjs-with-vercel) with zero configuration.
 
 Using [the Next.js example project from the <ProductName /> repository](https://github.com/zeit/now/tree/master/examples/nextjs), the following `now.json` configuration file was previously needed to deploy:
 
@@ -101,7 +101,7 @@ To check the output directory for your framework, run `npm run build` inside you
 
 <Note>
   Add the build output directory{' '}
-  <Link href="/guides/prevent-uploading-sourcepaths-with-nowignore">
+  <Link href="/guides/prevent-uploading-sourcepaths-with-vercelignore">
     to <InlineCode>.nowignore</InlineCode>
   </Link>{' '}
   so that your project is rebuilt with each deployment.
@@ -173,7 +173,7 @@ When using route parameters, a `now.json` file would have contained something si
 
 Instead of defining configuration, you can use the filesystem to create the route for you, using Path Segments.
 
-To use Path Segments using the example configuration's structure above, you only need to create a file within the `/api/users` directories called `[user].js` (including the square brackets, with any [supported language](/docs/v2/serverless-functions/supported-languages)). This will act as a Serverless Function that receives a query, but can be accessed through a path such as `my-zeit-domain.com/api/users/my-username`.
+To use Path Segments using the example configuration's structure above, you only need to create a file within the `/api/users` directories called `[user].js` (including the square brackets, with any [supported language](/docs/v2/serverless-functions/supported-languages)). This will act as a Serverless Function that receives a query, but can be accessed through a path such as `my-example.com/api/users/my-username`.
 
 To use the information from a Path Segment, you can use your [languages](/docs/v2/serverless-functions/supported-languages) method for using query strings. For example, a [Node.js Serverless Function](/docs/v2/serverless-functions/supported-languages#node.js) would look like the following:
 

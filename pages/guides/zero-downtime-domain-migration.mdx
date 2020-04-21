@@ -17,7 +17,7 @@ export const meta = {
   authors: ['msweeneydev'],
   url: '/guides/zero-downtime-domain-migration',
   editUrl: 'pages/guides/zero-downtime-domain-migration.mdx',
-  lastEdited: '2020-04-14T00:02:08.000Z'
+  lastEdited: '2020-04-16T03:34:45.000Z'
 }
 
 When migrating to another set of nameservers, there can often be downtime incurred. In this guide we will walk you through adding your domain to <OrgName /> and setting it up before migrating the nameservers, ensuring no downtime at any point.
@@ -36,7 +36,7 @@ When migrating to another set of nameservers, there can often be downtime incurr
 To get the process started, you will need to add your domain to your account or team by using the following command:
 
 <Snippet dark text="now domains add <domain>" />
-<Caption>Adding a domain to a <OrgName /> account using <Link href="/now"><ProductShortName /> CLI</Link>.</Caption>
+<Caption>Adding a domain to a <OrgName /> account using <Link href="/download"><ProductShortName /> CLI</Link>.</Caption>
 
 This command will add the domain to your account and output information you will need in order to verify the domain is yours.
 
@@ -74,7 +74,7 @@ With your domain provider, create the TXT record using the `name` (also known as
   width={1670/2}
   height={1046/2}
 />
-<Caption>Verifying a domain with <Link href="/now"><ProductShortName /> CLI</Link>.</Caption>
+<Caption>Verifying a domain with <Link href="/download"><ProductShortName /> CLI</Link>.</Caption>
 
 ## Step 2: Preparing the Domain with DNS, Certs, and Deploying to Production
 
@@ -85,7 +85,7 @@ Now that your domain is verified, you have more control over it with <ProductNam
 With [<ProductShortName /> CLI](/docs/v2/getting-started/installation), you can generate an SSL certificate for your domain and all subdomains, called common names (CNs), with the following command:
 
 <Snippet dark text="now certs issue \*.<domain> <domain> --challenge-only" />
-<Caption>Generating an SSL certificate for a domain and all subdomains with <Link href="/now"><ProductShortName /> CLI</Link>.</Caption>
+<Caption>Generating an SSL certificate for a domain and all subdomains with <Link href="/download"><ProductShortName /> CLI</Link>.</Caption>
 
 You will then be asked to solve a DNS challenge, required for the Certificate Authority (CA) to prove that <ProductName /> has sufficient permissions, consisting of two TXT records.
 
@@ -104,7 +104,7 @@ In this example, we'll take Gmail's current MX records and add them with <Produc
 
 <Caption>
   Adding MX records to a domain with{' '}
-  <Link href="/now">
+  <Link href="/download">
     <ProductShortName /> CLI
   </Link>
   .
@@ -134,13 +134,13 @@ When the domain is verified, you can deploy your project to production with <Pro
 <Note>
   Your projects will automatically use your custom domain when merging or
   pushing to the default branch when using either{' '}
-  <Link href="/docs/v2/integrations/now-for-gitlab">
+  <Link href="/docs/v2/integrations/vercel-for-gitlab">
     <ProductName /> for GitHub
   </Link>
-  ,<Link href="/docs/v2/integrations/now-for-gitlab">
+  ,<Link href="/docs/v2/integrations/vercel-for-gitlab">
     <ProductName /> for GitLab
   </Link>, or
-  <Link href="/docs/v2/integrations/now-for-bitbucket">
+  <Link href="/docs/v2/integrations/vercel-for-bitbucket">
     <ProductName /> for Bitbucket
   </Link>
   .

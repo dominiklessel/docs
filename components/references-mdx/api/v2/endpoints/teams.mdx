@@ -4,6 +4,7 @@ import Note from '~/components/text/note'
 import { P } from '~/components/text'
 import Endpoint from '~/components/api/endpoint'
 import Request from '~/components/api/request'
+import { API_ENDPOINT } from '~/lib/constants'
 
 export const meta = {
   editUrl: 'pages/docs/api/v2/api-docs-mdx/endpoints/teams.mdx',
@@ -28,7 +29,7 @@ Create a new team under your account. You need to send a `POST` request with the
 
 <Request
   method="POST"
-  url="https://api.zeit.co/v1/teams"
+  url={`${API_ENDPOINT}/v1/teams`}
   headers={{
     'Content-Type': 'application/json'
   }}
@@ -60,7 +61,7 @@ Delete a team under your account. You need to send a `DELETE` request with the d
 
 <Request
   method="DELETE"
-  url="https://api.zeit.co/v1/teams/team_LLHUOMOoDlqOp8wPE4kFo9pE"
+  url={`${API_ENDPOINT}/v1/teams/team_LLHUOMOoDlqOp8wPE4kFo9pE`}
   headers={{
     'Content-Type': 'application/json'
   }}
@@ -87,7 +88,7 @@ Get a list of all the team you belong to.
 
 ##### Example Request
 
-<Request url="https://api.zeit.co/v1/teams" auth />
+<Request url={`${API_ENDPOINT}/v1/teams`} auth />
 
 ##### Example Response
 
@@ -126,10 +127,7 @@ Get the information of a specific team, it could be used either passing the `:id
 
 ##### Example Request
 
-<Request
-  url="https://api.zeit.co/v1/teams/team_ofwUZockJlL53hINUGCc1ONW"
-  auth
-/>
+<Request url={`${API_ENDPOINT}/v1/teams/team_ofwUZockJlL53hINUGCc1ONW`} auth />
 
 ##### Example Response
 
@@ -163,7 +161,7 @@ Update the information of the team defined with the id. You need to send a `PATC
 
 <Request
   method="PATCH"
-  url="https://api.zeit.co/v1/teams/team_ofwUZockJlL53hINUGCc1ONW"
+  url={`${API_ENDPOINT}/v1/teams/team_ofwUZockJlL53hINUGCc1ONW`}
   headers={{
     'Content-Type': 'application/json'
   }}
@@ -201,7 +199,7 @@ Get the list of team members of the team defined in the URL. The response is a l
 ##### Example Request
 
 <Request
-  url="https://api.zeit.co/v1/teams/team_ofwUZockJlL53hINUGCc1ONW/members"
+  url={`${API_ENDPOINT}/v1/teams/team_ofwUZockJlL53hINUGCc1ONW/members`}
   auth
 />
 
@@ -250,7 +248,7 @@ Invite a user to join the team specified in the URL. To use it send a `POST` req
 
 <Request
   method="POST"
-  url="https://api.zeit.co/v1/teams/team_ofwUZockJlL53hINUGCc1ONW/members"
+  url={`${API_ENDPOINT}/v1/teams/team_ofwUZockJlL53hINUGCc1ONW/members`}
   headers={{
     'Content-Type': 'application/json'
   }}
@@ -288,7 +286,7 @@ Change the role or status of an user inside a team member. To change it send a `
 
 <Request
   method="PATCH"
-  url="https://api.zeit.co/v1/teams/team_ofwUZockJlL53hINUGCc1ONW/members/kr1PsOIzqEL5Xg6M4VZcZosf"
+  url={`${API_ENDPOINT}/v1/teams/team_ofwUZockJlL53hINUGCc1ONW/members/kr1PsOIzqEL5Xg6M4VZcZosf`}
   headers={{
     'Content-Type': 'application/json'
   }}
@@ -376,6 +374,6 @@ Remove the specified user from a team.
 
 <Request
   method="DELETE"
-  url="https://api.zeit.co/v1/teams/team_ofwUZockJlL53hINUGCc1ONW/members/kr1PsOIzqEL5Xg6M4VZcZosf"
+  url={`${API_ENDPOINT}/v1/teams/team_ofwUZockJlL53hINUGCc1ONW/members/kr1PsOIzqEL5Xg6M4VZcZosf`}
   auth
 />

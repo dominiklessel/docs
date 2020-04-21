@@ -13,7 +13,7 @@ export const meta = {
   lastEdited: '2019-10-15T22:03:42.000Z'
 }
 
-## <NameWrapper name={PRODUCT_SHORT_NAME} />
+## Overview
 
 The `now` command is used to deploy projects and can be used from either the root of the project directory or by providing a path to it.
 
@@ -55,7 +55,7 @@ want to deploy your directory to. You can choose to either link an existing proj
 Once set up, a new `.now` directory will be added to your directory. The `.now` directory contains
 both the organization and project `id` of your project. If you want unlink your directory, you can remove the `.now` directory.
 
-You can use the[`--confirm` option](#commands/now/unique-options/confirm) to skip these questions.
+You can use the[`--confirm` option](#commands/overview/unique-options/confirm) to skip these questions.
 
 ### Framework Detection
 
@@ -125,7 +125,7 @@ The `--env` option, shorthand `-e`, can be used to provide [Environment Variable
 
 <Note type="alert">
   The <InlineCode>--name</InlineCode> option has been deprecated in favor of{' '}
-  <Link href="#commands/now/project-linking">Project Linking</Link>, which
+  <Link href="#commands/overview/project-linking">Project Linking</Link>, which
   allows you to link a <ProductName /> Project to your local codebase when you
   run
   <InlineCode>now</InlineCode>.

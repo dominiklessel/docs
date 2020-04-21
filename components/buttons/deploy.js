@@ -3,8 +3,8 @@ import Button from './button'
 
 export default function DeployButton({ url }) {
   const deployUrl = url.includes('github.com/zeit/now/tree/master/examples')
-    ? `https://zeit.co/import/project?template=${url}`
-    : `https://zeit.co/import/${url}`
+    ? `https://vercel.com/import/project?template=${url}`
+    : `https://vercel.com/import/${url}`
 
   return (
     <div className="deploy-button">

@@ -33,7 +33,7 @@ if (global.document) {
           }`
         ]
       : []),
-    `Check out our code here: https://zeit.co/oss`,
+    `Check out our code here: https://vercel.com/oss`,
     `Have a great day! 📣🐢`
   ]
 
@@ -56,8 +56,8 @@ const HeadTags = props => {
         rel="canonical"
         href={
           props.url ||
-          `https://zeit.co${props.router.asPath}` ||
-          'https://zeit.co/docs'
+          `https://vercel.com${props.router.asPath}` ||
+          'https://vercel.com/docs'
         }
       />
     </>
@@ -98,8 +98,8 @@ class Head extends React.PureComponent {
             property="og:url"
             content={
               this.props.url ||
-              `https://zeit.co${this.props.router.asPath}` ||
-              'https://zeit.co/docs'
+              `https://vercel.com${this.props.router.asPath}` ||
+              'https://vercel.com/docs'
             }
           />
           <HeadTags {...this.props} />
@@ -217,8 +217,8 @@ class Head extends React.PureComponent {
             {
               "@type": "WebPage",
               "url": "${this.props.url ||
-                `https://zeit.co${this.props.router.asPath}` ||
-                'https://zeit.co/docs'}",
+                `https://vercel.com${this.props.router.asPath}` ||
+                'https://vercel.com/docs'}",
               "headline": "${this.props.ogTitle ||
                 this.props.title ||
                 `${ORG_NAME} Documentation`}",

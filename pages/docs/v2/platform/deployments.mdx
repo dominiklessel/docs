@@ -15,7 +15,7 @@ export const meta = {
   title: 'Deployments',
   description: `Understanding and making deployments with ${PRODUCT_NAME}.`,
   editUrl: 'pages/docs/v2/platform/deployments.mdx',
-  lastEdited: '2020-04-14T00:02:08.000Z'
+  lastEdited: '2020-04-16T03:34:45.000Z'
 }
 
 A deployment is the result of building your [Project](/docs/v2/platform/projects/) and making it available through a live URL.
@@ -32,7 +32,7 @@ Once the build step has completed successfully, a new, [immutable](https://en.wi
 
 ### Git Integration
 
-You can make deployments with Git by using either the [<ProductName /> for GitHub](/docs/v2/git-integrations/zeit-now-for-github), [<ProductName /> for GitLab](/docs/v2/git-integrations/zeit-now-for-gitlab), or [<ProductName /> for Bitbucket](/docs/v2/git-integrations/zeit-now-for-bitbucket) integrations.
+You can make deployments with Git by using either the [<ProductName /> for GitHub](/docs/v2/git-integrations/vercel-for-github), [<ProductName /> for GitLab](/docs/v2/git-integrations/vercel-for-gitlab), or [<ProductName /> for Bitbucket](/docs/v2/git-integrations/vercel-for-bitbucket) integrations.
 
 When using these integrations, every push to a branch will provide you with a [preview deployment](/docs/v2/platform/deployments/#preview) to view your changes.
 
@@ -166,7 +166,7 @@ By appending `/_logs` to a deployment URL or [custom domain](/docs/v2/custom-dom
 
 ### Security Considerations
 
-These pathnames redirect to `https://zeit.co` and **require logging in** to access any sensitive information. By default, a 3rd-party can **never** access your source or logs by crafting a deployment URL with one of these paths.
+These pathnames redirect to `https://vercel.com` and **require logging in** to access any sensitive information. By default, a 3rd-party can **never** access your source or logs by crafting a deployment URL with one of these paths.
 
 However, you can configure project settings to make these paths public. [Learn more here](/docs/v2/platform/projects#logs-and-source-access).
 
